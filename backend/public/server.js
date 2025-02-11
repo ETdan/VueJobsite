@@ -1,7 +1,7 @@
-const jsonServer = require("json-server");
-const server = jsonServer.create();
-const router = jsonServer.router("jobs.json"); // Make sure this file exists in the same directory
-const middlewares = jsonServer.defaults({
+import { create, router as _router, defaults } from "json-server";
+const server = create();
+const router = _router("../jobs.json"); // Make sure this file exists in the same directory
+const middlewares = defaults({
   static: false, // Disable serving static files from `/public`
 });
 
