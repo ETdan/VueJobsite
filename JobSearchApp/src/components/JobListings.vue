@@ -13,7 +13,9 @@ defineProps({
 
 onMounted(async () => {
   try {
-    const response = await axios.get("/api/jobs");
+    const response = await axios.get(
+      "https://vuejobsiteback.onrender.com/jobs"
+    );
     jobs.value = response.data;
   } catch {
     console.log("error fetching jobs");

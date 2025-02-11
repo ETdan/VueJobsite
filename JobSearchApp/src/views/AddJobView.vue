@@ -34,7 +34,10 @@ const handlesumit = async () => {
     },
   };
   try {
-    const res = await axios.post("/api/jobs", newData);
+    const res = await axios.post(
+      "https://vuejobsiteback.onrender.com/jobs",
+      newData
+    );
     toast.success("Job Added Successfully");
     route.push(`/jobs/${res.data.id}`);
   } catch (error) {
